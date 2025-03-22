@@ -9,17 +9,21 @@ const changeActiveClass=()=>{
     })
 }
 menuItems.forEach(item=>{
-    item.addEventListener('click',()=>{
+    item.addEventListener('click',(e)=>{
         changeActiveClass();
         item.classList.add('active');
+      
 
-        if(item.id != 'notifications'){
-            document.querySelector('.notification-popup')
-            Style.display='none';
-        }else{
-            document.querySelector('.notification-popup')
-            Style.display='block';
-        }
+        // if(item.id != 'notifications'){
+        //     document.querySelector('.notification-popup')
+        //     Style.display='none';
+        //     e.preventDefault();
+        // }else{
+        //     document.querySelector('.notification-popup')
+        //     Style.display='block';
+        //     e.preventDefault();
+        // }
+        e.preventDefault();
         
     })
 })
