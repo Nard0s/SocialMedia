@@ -530,7 +530,7 @@ main .container .right{
     left: 0;
     z-index: 100;
     text-align: center;
-    display: grid;
+    /* display: grid; */
     place-items: center;
     font-size:0.9rem ;
     display: none;
@@ -541,6 +541,7 @@ main .container .right{
     padding: 3rem;
     border-radius: var(--card-border-radius);
     width: 50%;
+    box-shadow: 0 0 1rem var(--color-primary);
 }
 
 /* ==============================
@@ -664,7 +665,7 @@ main .container .right{
 media qures for small laptops and tablets
 ======================================= */
 
-@media screen and (max-width:1280px){
+@media screen and (max-width:1280px){ 
     .container{
         width: 96%;
     }
@@ -685,6 +686,9 @@ media qures for small laptops and tablets
     }
     .left .btn{
         display: none;
+    }
+    .customize-theme .card{
+        width: 92vw;
     }
 }
 
@@ -722,6 +726,7 @@ media qureies for small tablets and normal phone
      main .container .middle{
         grid-column: 1/3;
      }
+
      main .container .right{
         display: none;
      }

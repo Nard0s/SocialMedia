@@ -10,7 +10,10 @@ const message= document.querySelectorAll('.message')
 const messageSearch= document.querySelector('#message-search')
 // THEME 
 const theme=document.querySelector('#theme')
-const themeModal=document.querySelector('.customiz-theme');
+const themeModal=document.querySelector('.customize-theme');
+const fontSize=document.querySelectorAll('.choose-size span')
+var root = document.querySelector(':root');
+const colorPalette=document.querySelectorAll('.choose-color span')
 // remove active class from all menu items
 
 // =========================================
@@ -81,9 +84,68 @@ messageSearch.addEventListener ('keyup', searchMessage)
 // =========================================
 //          THEME CUSTOMIZATION
 // ========================================
+// open modal 
+const openThemeModal=()=>{
+    themeModal.style.display='grid';
+};
+theme.addEventListener('click', openThemeModal)
 
+// close modal 
+const closeThemeModal=(e)=>{
+    if(e.target.classList.contains('customize-theme')){
+        themeModal.style.display='none';
+    }
+};
+themeModal.addEventListener('click',closeThemeModal)
 
+// =========================================
+//          FONT SIZE
+// ========================================
 
+const removeSizeSelector=()=>{
+    fontSize.forEach(size=>{
+        size.classList.remove('active')
+    })
+}
+fontSize.forEach(size=>{
+    size.addEventListener('click',()=>{
+        removeSizeSelector();
+        size.classList.toggle('active')
+        let fontSize;
+        
+        if(size.classList.contains('font-size-1')){
+            fontSize='10px';
+            root.style.setProperty('--sticky-top-left','5.4rem')
+            root.style.setProperty('--sticky-top-righ','5.4rem')
+        }else if(size.classList.contains('font-size-2')){
+            fontSize='13px';
+            root.style.setProperty('--sticky-top-left','5.4rem')
+            root.style.setProperty('--sticky-top-righ','-7rem')
+        }
+        else if(size.classList.contains('font-size-3')){
+            fontSize='16px';
+            root.style.setProperty('--sticky-top-left','-2rem')
+            root.style.setProperty('--sticky-top-righ','-17rem')
+        }
+        else if(size.classList.contains('font-size-4')){
+            fontSize='19px';
+            root.style.setProperty('--sticky-top-left','5.4rem')
+            root.style.setProperty('--sticky-top-right','-25rem')
+        }
+        else if(size.classList.contains('font-size-5')){
+            fontSize='22px';
+            root.style.setProperty('--sticky-top-left','5.4rem')
+            root.style.setProperty('--sticky-top-right','-33rem')
+        }
+        // now we can change all font sises at once just by changing out html element
+        document.querySelector('html').style.fontSize = fontSize;
+    })
+    
+
+})
+// =========================================
+//          FONT SIZE
+// ========================================
 
 
 
