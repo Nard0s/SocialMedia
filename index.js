@@ -13,7 +13,9 @@ const theme=document.querySelector('#theme')
 const themeModal=document.querySelector('.customize-theme');
 const fontSize=document.querySelectorAll('.choose-size span')
 var root = document.querySelector(':root');
-const colorPalette=document.querySelectorAll('.choose-color span')
+const colorPalette=document.querySelectorAll('.choose-color span');
+const backgroundColor=document.querySelectorAll('.choose-background div')
+
 // remove active class from all menu items
 
 // =========================================
@@ -169,6 +171,42 @@ colorPalette.forEach(color=>{
         root.style.setProperty('--primary-color-hue',primaryHue);
     })
 })
+// =========================================
+//          CHANGE BACKGROUND
+// ========================================
 
 
+const removeActive=()=>{
+    backgroundColor.forEach(color=>{
+        color.classList.remove('active');
+    })
+}
+backgroundColor.forEach(bColor=>{
+    bColor.addEventListener('click', ()=>{
+        removeActive();
+        bColor.classList.toggle('active')
+
+        let lightColorLightness;
+        let whiteColorLightness;
+        let darkColorLightness;
+        if(bColor.classList.contains('bg-1')){
+            lightColorLightness ='95%';
+            darkColorLightness ='17%';
+            whiteColorLightness ='100%';
+
+        }else if(bColor.classList.contains('bg-2')){
+            lightColorLightness ='15%';
+            darkColorLightness ='95%';
+            whiteColorLightness ='20%';
+
+        }else if(bColor.classList.contains('bg-3')){
+            lightColorLightness ='0%';
+            darkColorLightness ='95%';
+            whiteColorLightness ='10%';
+        }
+        root.style.setProperty('--light-color-lightness',lightColorLightness);
+        root.style.setProperty('--dark-color-lightness',darkColorLightness);
+        root.style.setProperty('--white-color-lightness',whiteColorLightness);
+    })
+})
 
