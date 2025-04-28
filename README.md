@@ -16,3 +16,11 @@ But hey — it **looks** like you can do all that, and sometimes *fake it 'til y
 - 🎨 **Theme/Color Changer** — This actually works! Magic! 🌟
 
 ---
+## 🛠️ Tech Used:
+
+- 🖌️ HTML - Skeleton of dreams
+- 🎨 CSS - Makeup for the dreams
+- 🧠 JavaScript - Sparkles of imagination
+- 🐙 Git and GitHub - Because I'm learning to be a real dev!
+
+---
