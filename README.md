@@ -24,3 +24,11 @@ But hey — it **looks** like you can do all that, and sometimes *fake it 'til y
 - 🐙 Git and GitHub - Because I'm learning to be a real dev!
 
 ---
+## 🚀 Why I Made This?
+
+- To practice **frontend development** and become a little code wizard 🧙‍♀️
+- To stop crying when using Git and GitHub 😂
+- To create a cool-looking project while learning
+- Because I believe: **"Learning by doing silly projects > Reading boring tutorials"** 🌟
+
+---
