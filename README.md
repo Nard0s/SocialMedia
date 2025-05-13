@@ -1,4 +1,4 @@
-# 🚀 Welcome to **Social Media Simulator 3000** 🌈✨
+# 🚀 Welcome to **Social Media Simulator 3000** ✨
 
 **This is not real. It's just very, very good-looking.** 😎  
 
