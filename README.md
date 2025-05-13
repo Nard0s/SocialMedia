@@ -45,3 +45,7 @@ And I’m 100% proud of it anyway! 💪🧡
 # ✨ Life Motto For This Project:
 
 > **"Fake it beautifully until you build it fully!"** 🌟😎
+<p style="text-align: center; margin-top: 20px;">
+  🌐 Visit Live Site – Click here <a href="https://social-media-kappa-coral.vercel.app/" target="_blank">Visit the GitHub Repo</a> 🚀
+</p>
+
